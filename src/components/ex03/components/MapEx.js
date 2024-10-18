@@ -1,12 +1,14 @@
-const arr = [1, 2, 3, 4, 5];
+import { Fragment } from "react";
 
+const arr = [1, 2, 3, 4, 5];
+// console.log(arr);
 // arr.map((num) => console.log(num + "❤"));
 
 export const MapEx = () => {
   return (
     <div>
       {arr.map((num) => (
-        <frameElement key={num}>{num}</frameElement>
+        <Fragment key={num}>{num}</Fragment>
         // <h2 key={num}>{num}</h2>
       ))}
     </div>

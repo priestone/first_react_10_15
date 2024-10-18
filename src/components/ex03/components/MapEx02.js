@@ -1,3 +1,5 @@
+const day = ["월", "화", "수"];
+
 const menus = [
   {
     id: 0,
