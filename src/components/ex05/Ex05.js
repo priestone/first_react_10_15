@@ -98,7 +98,7 @@ const Ex05 = () => {
         </StatusBar>
         <StatusText>
           <p>0:0</p>
-          <p>03:54</p>
+          <p>-03:54</p>
         </StatusText>
         <Play>
           <i class="fa-solid fa-backward"></i>

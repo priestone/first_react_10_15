@@ -1,3 +1,5 @@
+const day = ["월", "화", "수"];
+
 const menus = [
   {
     id: 0,
@@ -24,17 +26,18 @@ const menus = [
 
 export const MapEx02 = () => {
   return (
-    <div>
-      {menus.map((menu) => (
-        <div key={menu.id}>
-          <h2>{menu.week}</h2>
-          <ul>
-            <li>아침 메뉴 : {menu.break}</li>
-            <li>점심 메뉴 : {menu.lunch}</li>
-            <li>저녁 메뉴 : {menu.dinner}</li>
-          </ul>
-        </div>
-      ))}
+<div>
+  {menus.map((menu) => (
+     
+    <div key={menu.id}>
+      <h2>{menu.week} 메뉴 입니다.</h2>
+      <ul>
+        <li>아침 메뉴 : {menu.break}</li>
+        <li>아침 메뉴 : {menu.lunch}</li>
+        <li>아침 메뉴 : {menu.dinner}</li>
+      </ul>
     </div>
+  ))}
+</div>
   );
 };
