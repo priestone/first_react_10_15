@@ -32,9 +32,9 @@ const App = () => {
 
       {/* <Ex05></Ex05> */}
 
-      <MusicApp></MusicApp>
+      {/* <MusicApp></MusicApp> */}
 
-      {/* <Ex06></Ex06> */}
+      <Ex06></Ex06>
     </>
   );
 };
