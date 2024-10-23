@@ -9,10 +9,13 @@ import Ex05 from "./components/ex05/Ex05";
 import MusicApp from "./components/ex05/MusicApp";
 import Ex06 from "./components/ex06/Ex06";
 import Ex07 from "./components/ex07/Ex07";
+import Test01 from "./components/teststudy/Test01";
 
 const App = () => {
   return (
     <>
+      <Test01></Test01>
+
       {/* <Header></Header>
       <Section></Section>
       <Footer></Footer> */}
@@ -37,7 +40,7 @@ const App = () => {
 
       {/* <Ex06></Ex06> */}
 
-      <Ex07></Ex07>
+      {/* <Ex07></Ex07> */}
     </>
   );
 };
