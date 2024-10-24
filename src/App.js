@@ -14,7 +14,7 @@ import Test01 from "./components/teststudy/Test01";
 const App = () => {
   return (
     <>
-      <Test01></Test01>
+      {/* <Test01></Test01> */}
 
       {/* <Header></Header>
       <Section></Section>
@@ -40,7 +40,7 @@ const App = () => {
 
       {/* <Ex06></Ex06> */}
 
-      {/* <Ex07></Ex07> */}
+      <Ex07></Ex07>
     </>
   );
 };
