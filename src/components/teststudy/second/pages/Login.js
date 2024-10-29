@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import { faKiwiBird } from "@fortawesome/free-solid-svg-icons";
+import { faKiwiBird, faEye ,faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Container = styled.div`
   height: 100vh;
@@ -67,6 +68,17 @@ const Button = styled.button`
   opacity: ${(props) => props.$isActive};
 `;
 
+const PasswordWrap =styled.div`
+position:relative;
+`;
+
+const View = styled.div`
+position:absolute;
+top:18px;
+right:20px;
+cursor: pointer;
+`;
+
 const Login = () => {
   const {
     register,
@@ -78,6 +90,16 @@ const Login = () => {
   const loginSubmit = (data) => {
     nav("/");
   };
+
+  const [showPassword, setShowpassword] =useState(false);
+  const [open, setOpen] = useState(true);
+
+  const togglePassword = () => {
+    setShowpassword(!showPassword)
+    setOpen(!open)
+    };
+
+
   return (
     <Container>
       <Form onSubmit={handleSubmit(loginSubmit)}>
@@ -97,6 +119,7 @@ const Login = () => {
           placeholder="아이디를 입력해주세요"
         />
         <p>{errors?.username?.message}</p>
+        <PasswordWrap>
         <input
           {...register("password", {
             required: "비밀번호는 필수 입니다.",
@@ -105,9 +128,13 @@ const Login = () => {
               message: "비밀번호는 9자리 이상으로 하세요",
             },
           })}
-          type="password"
+          type={showPassword ? "text" : "password"}
           placeholder="패스워드를 입력해주세요"
         />
+        <View onClick={togglePassword}>
+        <FontAwesomeIcon icon={open ? faEye : faEyeSlash} />
+        </View>
+        </PasswordWrap>
         <p>{errors?.password?.message}</p>
 
         <Button $isActive={isValid ? "1" : "0.5"} $isPointer={isValid}>
