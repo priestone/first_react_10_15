@@ -9,8 +9,8 @@ import Ex05 from "./components/ex05/Ex05";
 import MusicApp from "./components/ex05/MusicApp";
 import Ex06 from "./components/ex06/Ex06";
 import Ex07 from "./components/ex07/Ex07";
-import Test01 from "./components/teststudy/Test01";
 import Ex08 from "./components/ex08/Ex08";
+import Test02 from "./components/teststudy/second/Test02";
 
 const App = () => {
   return (
@@ -43,7 +43,9 @@ const App = () => {
 
       {/* <Ex07></Ex07> */}
 
-      <Ex08></Ex08>
+      {/* <Ex08></Ex08> */}
+
+      <Test02></Test02>
     </>
   );
 };
